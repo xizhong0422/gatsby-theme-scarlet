@@ -113,12 +113,12 @@ export const WaveWrapper = styled.div`
 
 export const InnerWave = styled.div`
   width: 100%;
-  height: 30vh;
+  height: 20vh;
   left: 0;
   position: absolute;
   svg {
     width: 100%;
-    height: 30vh;
+    height: 20vh;
   }
   path {
     ${waveAnimation("20s")};
@@ -217,6 +217,7 @@ export const ProjectLink = styled.a`
     height: 100%;
     width: 100%;
     position: absolute;
+    border-radius: 1rem;
     background: linear-gradient(
       ${theme.colors.primary},
       ${theme.colors.secondary}

@@ -5,7 +5,7 @@ const AnimatedWave = ({ enableWave = false, bottom = true }) => {
   return (
     enableWave && (
       <WaveWrapper bottom={bottom}>
-        <InnerWave layer="1" waveoffset="-2.5vh">
+        <InnerWave layer="1" waveoffset="-1.5vh">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 800 338.05"
@@ -21,7 +21,7 @@ const AnimatedWave = ({ enableWave = false, bottom = true }) => {
             </path>
           </svg>
         </InnerWave>
-        <InnerWave layer="2" waveoffset="2.5vh">
+        <InnerWave layer="2" waveoffset="1.5vh">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 800 338.05"
