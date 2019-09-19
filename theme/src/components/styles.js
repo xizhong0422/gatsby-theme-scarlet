@@ -100,15 +100,17 @@ const wave = keyframes`
   }
 `
 export const WaveWrapper = styled.div`
-  ${props => ({
-    transform: props.bottom && "matrix(1, 0, 0, -1, 0, 0)",
-  })}
   position: absolute;
   left: 0;
   height: 100%;
   width: 100%;
   user-select: none;
   pointer-events: none;
+  ${({ bottom }) =>
+    bottom &&
+    css`
+      transform: matrix(1, 0, 0, -1, 0, 0);
+    `}
 `
 
 export const InnerWave = styled.div`
@@ -123,9 +125,9 @@ export const InnerWave = styled.div`
   path {
     ${waveAnimation("20s")};
   }
-  ${props => ({
-    zIndex: props.layer && props.layer,
-    top: props.waveoffset && props.waveoffset,
+  ${({ layer, waveoffset }) => ({
+    zIndex: layer && layer,
+    top: waveoffset && waveoffset,
   })}
 `
 
@@ -140,9 +142,9 @@ export const StyledSection = styled.section`
     min-height: 70vh;
     height: auto;
   }
-  ${props => ({
-    background: props.backgroundColor && props.backgroundColor,
-    color: props.light ? theme.colors.light : theme.colors.dark,
+  ${({ backgroundColor, light }) => ({
+    background: backgroundColor && backgroundColor,
+    color: light ? theme.colors.light : theme.colors.dark,
   })}
 `
 

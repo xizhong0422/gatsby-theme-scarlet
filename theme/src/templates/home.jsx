@@ -56,6 +56,7 @@ const HomeTemplate = () => {
     siteDescription,
     siteLanguage,
   } = data.site.siteMetadata
+
   return (
     <ThemeProvider theme={theme}>
       <Layout>
@@ -71,9 +72,9 @@ const HomeTemplate = () => {
           <Section backgroundColor={theme.colors.white} id="work">
             <Styled.h2>{work.heading}</Styled.h2>
             <Styled.p>{work.content}</Styled.p>
-            <ProjectList>
-              {projectsItems ? (
-                projectsItems.map(
+            {projectsItems && (
+              <ProjectList>
+                {projectsItems.map(
                   ({ name, link, alt, badge, image }, index) => (
                     <ProjectItem
                       key={name + index}
@@ -84,13 +85,9 @@ const HomeTemplate = () => {
                       link={link}
                     />
                   )
-                )
-              ) : (
-                <li>
-                  <Styled.p>No projects yet!</Styled.p>
-                </li>
-              )}
-            </ProjectList>
+                )}
+              </ProjectList>
+            )}
           </Section>
           <Section
             backgroundColor={theme.colors.primary}

@@ -13,7 +13,7 @@ module.exports = {
     // edit this data in config/site.js
     title: config.siteTitle,
     shortTitle: config.siteTitleShort,
-    author: "Shaun Wong | @devShaun",
+    author: config.siteAuthor,
     siteLogoText: config.siteLogoText,
     siteDescription: config.siteDescription,
     siteUrl: config.siteUrl + pathPrefix,
