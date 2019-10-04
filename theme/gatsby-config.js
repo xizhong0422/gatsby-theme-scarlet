@@ -45,6 +45,16 @@ module.exports = {
         display: `standalone`,
       },
     },
+    {
+      resolve: `gatsby-plugin-schema-snapshot`,
+      options: {
+        path: `${__dirname}/schema.gql`,
+        exclude: {
+          plugins: [`gatsby-source-npm-package-search`],
+        },
+        update: process.env.GATSBY_UPDATE_SCHEMA_SNAPSHOT,
+      },
+    },
     "gatsby-transformer-json",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

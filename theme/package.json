@@ -26,6 +26,7 @@
     "gatsby-plugin-manifest": "^2.2.20",
     "gatsby-plugin-netlify": "^2.1.17",
     "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-plugin-schema-snapshot": "^1.0.0",
     "gatsby-plugin-sharp": "^2.2.27",
     "gatsby-plugin-theme-ui": "^0.2.43",
     "gatsby-source-filesystem": "^2.1.28",

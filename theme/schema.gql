@@ -1,0 +1,103 @@
+### Type definitions saved at 2019-10-04T05:16:24.686Z ###
+
+type File implements Node @dontInfer {
+  birthtime: Date @deprecated(reason: "Use `birthTime` instead")
+  birthtimeMs: Float @deprecated(reason: "Use `birthTime` instead")
+  sourceInstanceName: String
+  absolutePath: String
+  relativePath: String
+  extension: String
+  size: Int
+  prettySize: String
+  modifiedTime: Date @dateformat
+  accessTime: Date @dateformat
+  changeTime: Date @dateformat
+  birthTime: Date @dateformat
+  root: String
+  dir: String
+  base: String
+  ext: String
+  name: String
+  relativeDirectory: String
+  dev: Int
+  mode: Int
+  nlink: Int
+  uid: Int
+  gid: Int
+  rdev: Int
+  blksize: Int
+  ino: Int
+  blocks: Int
+  atimeMs: Float
+  mtimeMs: Float
+  ctimeMs: Float
+  atime: Date @dateformat
+  mtime: Date @dateformat
+  ctime: Date @dateformat
+}
+
+type ImageSharp implements Node @childOf(mimeTypes: [], types: ["File"], many: false) @dontInfer
+
+type Directory implements Node @dontInfer {
+  sourceInstanceName: String
+  absolutePath: String
+  relativePath: String
+  extension: String
+  size: Int
+  prettySize: String
+  modifiedTime: Date @dateformat
+  accessTime: Date @dateformat
+  changeTime: Date @dateformat
+  birthTime: Date @dateformat
+  root: String
+  dir: String
+  base: String
+  ext: String
+  name: String
+  relativeDirectory: String
+  dev: Int
+  mode: Int
+  nlink: Int
+  uid: Int
+  gid: Int
+  rdev: Int
+  blksize: Int
+  ino: Int
+  blocks: Int
+  atimeMs: Float
+  mtimeMs: Float
+  ctimeMs: Float
+  birthtimeMs: Float
+  atime: Date @dateformat
+  mtime: Date @dateformat
+  ctime: Date @dateformat
+  birthtime: Date @dateformat
+}
+
+type DataJson implements Node @dontInfer {
+  hero: DataJsonHero
+  work: DataJsonWork
+  about: DataJsonAbout
+}
+
+type DataJsonHero {
+  imageAlt: String
+}
+
+type DataJsonWork {
+  heading: String
+  content: String
+}
+
+type DataJsonAbout {
+  heading: String
+  content: String
+}
+
+type ProjectsJson implements Node @dontInfer {
+  name: String
+  link: String
+  alt: String
+  image: String
+  badge: String
+}
