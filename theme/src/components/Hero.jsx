@@ -9,7 +9,7 @@ const Hero = ({ imageAlt, id }) => {
     query {
       file(relativePath: { eq: "hero.png" }) {
         childImageSharp {
-          fixed(width: 768, height: 1024) {
+          fixed(width: 972, height: 1297) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
