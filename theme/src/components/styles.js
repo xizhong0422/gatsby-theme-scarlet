@@ -28,10 +28,15 @@ export const NavLink = styled.a`
   color: ${theme.colors.light};
   text-decoration: none;
   cursor: pointer;
+  transition: 0.27s ease;
+  &:hover,
+  &:focus {
+    filter: brightness(0.95);
+  }
 `
 
 export const NavItem = styled.li`
-  padding: 0 1rem;
+  padding-left: 1rem;
 `
 
 export const SectionWrap = styled.main`
@@ -237,7 +242,8 @@ export const ProjectImage = styled.img`
   height: 100%;
   width: 100%;
   z-index: 1;
-  ${zoomAnimation("40s")};
+  ${zoomAnimation("40s")}
+  overflow: hidden;
 `
 
 export const ProjectContent = styled.div`
@@ -246,6 +252,7 @@ export const ProjectContent = styled.div`
   align-items: flex-end;
   height: 100%;
   padding: 1rem;
+  border-radius: 1rem;
 `
 
 export const ProjectTitle = styled.h3`
