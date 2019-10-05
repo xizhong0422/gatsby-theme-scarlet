@@ -19,7 +19,7 @@
     "react-dom": "^16.10.1"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.17",
+    "@emotion/core": "^10.0.20",
     "@emotion/styled": "^10.0.17",
     "@mdx-js/react": "^1.5.0",
     "gatsby-image": "^2.2.24",
