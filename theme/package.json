@@ -36,7 +36,7 @@
     "gatsby-transformer-json": "^2.2.13",
     "gatsby-transformer-sharp": "^2.2.21",
     "react-helmet": "^5.2.1",
-    "theme-ui": "^0.2.43",
+    "theme-ui": "^0.2.44",
     "typeface-open-sans": "^0.0.75",
     "typeface-pacifico": "^0.0.76"
   },
