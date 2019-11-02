@@ -12,12 +12,12 @@
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "peerDependencies": {
-    "gatsby": "^2.17.4",
+    "gatsby": "^2.17.7",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
-    "gatsby": "^2.17.4",
+    "gatsby": "^2.17.7",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
@@ -25,16 +25,16 @@
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.22",
     "@mdx-js/react": "^1.5.1",
-    "gatsby-image": "^2.2.29",
-    "gatsby-plugin-manifest": "^2.2.23",
-    "gatsby-plugin-netlify": "^2.1.22",
+    "gatsby-image": "^2.2.30",
+    "gatsby-plugin-manifest": "^2.2.26",
+    "gatsby-plugin-netlify": "^2.1.23",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-schema-snapshot": "^1.0.0",
-    "gatsby-plugin-sharp": "^2.2.32",
+    "gatsby-plugin-sharp": "^2.2.36",
     "gatsby-plugin-theme-ui": "^0.2.43",
-    "gatsby-source-filesystem": "^2.1.33",
-    "gatsby-transformer-json": "^2.2.15",
-    "gatsby-transformer-sharp": "^2.3.0",
+    "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-transformer-json": "^2.2.16",
+    "gatsby-transformer-sharp": "^2.3.2",
     "react-helmet": "^5.2.1",
     "theme-ui": "^0.2.44",
     "typeface-open-sans": "^0.0.75",
