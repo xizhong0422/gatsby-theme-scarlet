@@ -12,12 +12,12 @@
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "peerDependencies": {
-    "gatsby": "^2.18.25",
+    "gatsby": "^2.19.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "gatsby": "^2.18.25",
+    "gatsby": "^2.19.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
@@ -26,12 +26,12 @@
     "@emotion/styled": "^10.0.27",
     "@mdx-js/react": "^1.5.5",
     "gatsby-image": "^2.2.39",
-    "gatsby-plugin-manifest": "^2.2.37",
+    "gatsby-plugin-manifest": "^2.2.38",
     "gatsby-plugin-netlify": "^2.1.31",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-schema-snapshot": "^1.0.0",
-    "gatsby-plugin-sharp": "^2.3.13",
-    "gatsby-plugin-theme-ui": "^0.2.53",
+    "gatsby-plugin-sharp": "^2.4.0",
+    "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-json": "^2.2.25",
     "gatsby-transformer-sharp": "^2.3.13",
