@@ -12,12 +12,12 @@
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "peerDependencies": {
-    "gatsby": "^2.24.1",
+    "gatsby": "^2.24.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "gatsby": "^2.24.1",
+    "gatsby": "^2.24.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
