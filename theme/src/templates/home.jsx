@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Global } from "@emotion/core"
 import { ThemeProvider } from "theme-ui"
 import theme from "../gatsby-plugin-theme-ui"
-import { Layout, Styled } from "theme-ui"
+import { Styled } from "theme-ui"
 import { Header, Hero, Section, ProjectItem, Footer } from "../components"
 import { SectionWrap, ProjectList } from "../components/styles"
 import { globalStyles } from "./styles"
@@ -57,51 +57,48 @@ const HomeTemplate = () => {
     siteLanguage,
   } = data.site.siteMetadata
 
+  // Replace depreciated Layout
   return (
     <ThemeProvider theme={theme}>
-      <Layout>
-        <Helmet>
-          <html lang={siteLanguage} />
-          <title>{siteTitle}</title>
-          <meta name="Description" content={siteDescription} />
-        </Helmet>
-        <Global styles={globalStyles} />
-        <Header logoTxt={siteLogoText} />
-        <SectionWrap>
-          <Hero imageAlt={hero.imageAlt} id="hero" />
-          <Section backgroundColor={theme.colors.white} id="work">
-            <Styled.h2>{work.heading}</Styled.h2>
-            <Styled.p>{work.content}</Styled.p>
-            {projectsItems && (
-              <ProjectList>
-                {projectsItems.map(
-                  ({ name, link, alt, badge, image }, index) => (
-                    <ProjectItem
-                      key={name + index}
-                      image={image}
-                      alt={alt}
-                      name={name}
-                      badge={badge}
-                      link={link}
-                    />
-                  )
-                )}
-              </ProjectList>
-            )}
-          </Section>
-          <Section
-            backgroundColor={theme.colors.primary}
-            id="about"
-            light
-            enableWave={true}
-            waveBottom={false}
-          >
-            <Styled.h2>{about.heading}</Styled.h2>
-            <Styled.p>{about.content}</Styled.p>
-          </Section>
-        </SectionWrap>
-        <Footer />
-      </Layout>
+      <Helmet>
+        <html lang={siteLanguage} />
+        <title>{siteTitle}</title>
+        <meta name="Description" content={siteDescription} />
+      </Helmet>
+      <Global styles={globalStyles} />
+      <Header logoTxt={siteLogoText} />
+      <SectionWrap>
+        <Hero imageAlt={hero.imageAlt} id="hero" />
+        <Section backgroundColor={theme.colors.white} id="work">
+          <Styled.h2>{work.heading}</Styled.h2>
+          <Styled.p>{work.content}</Styled.p>
+          {projectsItems && (
+            <ProjectList>
+              {projectsItems.map(({ name, link, alt, badge, image }, index) => (
+                <ProjectItem
+                  key={name + index}
+                  image={image}
+                  alt={alt}
+                  name={name}
+                  badge={badge}
+                  link={link}
+                />
+              ))}
+            </ProjectList>
+          )}
+        </Section>
+        <Section
+          backgroundColor={theme.colors.primary}
+          id="about"
+          light
+          enableWave={true}
+          waveBottom={false}
+        >
+          {/* <Styled.h2>{about.heading}</Styled.h2>
+          <Styled.p>{about.content}</Styled.p> */}
+        </Section>
+      </SectionWrap>
+      <Footer />
     </ThemeProvider>
   )
 }

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { keyframes, css } from "@emotion/core"
+import { keyframes, css } from "@emotion/react"
 import theme from "../gatsby-plugin-theme-ui"
 
 export const StyledHeader = styled.header`
@@ -57,19 +57,19 @@ export const StyledHero = styled.section`
   height: 100vh;
 `
 
-export const waveAnimation = length => css`
+export const waveAnimation = (length) => css`
   animation: ${wave} ${length} linear infinite alternate;
 `
 
-export const dashAnimation = length => css`
+export const dashAnimation = (length) => css`
   animation: ${dash} ${length} linear forwards;
 `
 
-export const zoomAnimation = length => css`
+export const zoomAnimation = (length) => css`
   animation: ${zoom} ${length} linear infinite;
 `
 
-export const moveAnimation = length => css`
+export const moveAnimation = (length) => css`
   animation: ${move} ${length} linear infinite;
 `
 
