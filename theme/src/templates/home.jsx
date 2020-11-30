@@ -7,7 +7,7 @@ import { Header, Hero, Section, ProjectItem, Footer } from "../components"
 import { SectionWrap, ProjectList } from "../components/styles"
 import GlobalStyles from './globalStyles'
 
-const HomeTemplate = () => {
+const HomeTemplate = ({pageContext}) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -46,7 +46,7 @@ const HomeTemplate = () => {
       }
     }
   `)
-
+  console.log(pageContext)
   const projectsItems = data.allProjectsJson.nodes
   const { about, work, hero } = data.dataJson
   const {
