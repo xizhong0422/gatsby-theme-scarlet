@@ -1,6 +1,9 @@
-import styled from "@emotion/styled"
-import { keyframes, css } from "@emotion/react"
-import theme from "../gatsby-plugin-theme-ui"
+import styled, { keyframes, css } from 'styled-components'
+import theme from "../theme"
+
+export const Container = styled.div`
+  max-width: 1440px;
+`
 
 export const StyledHeader = styled.header`
   display: flex;

@@ -2,7 +2,7 @@ import "typeface-open-sans"
 import "typeface-pacifico"
 
 const systemFontStack =
-  '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol'
+  '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
 
 const theme = {
   // Global Theme Styles
@@ -57,17 +57,6 @@ const theme = {
       fontSize: [5, 6],
       fontFamily: "heading",
     },
-    // Theme UI Components
-    // Layout: {
-    //   color: "dark",
-    //   fontFamily: "body",
-    //   fontSize: 1,
-    // },
-    // Container: {
-    //   padding: 4,
-    //   paddingBottom: 0,
-    //   paddingTop: 0,
-    // },
   },
 }
 

@@ -1,6 +1,5 @@
 import React from "react"
-import { Container } from "theme-ui"
-import { StyledHeader, Nav, NavItem, NavList, NavLink } from "./styles"
+import { Container, StyledHeader, Nav, NavItem, NavList, NavLink } from "./styles"
 
 const Header = () => {
   return (

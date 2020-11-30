@@ -1,13 +1,11 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
-import { Global } from "@emotion/core"
-import { ThemeProvider } from "theme-ui"
-import theme from "../gatsby-plugin-theme-ui"
-import { Styled } from "theme-ui"
+import { ThemeProvider } from "styled-components"
+import theme from "../theme"
 import { Header, Hero, Section, ProjectItem, Footer } from "../components"
 import { SectionWrap, ProjectList } from "../components/styles"
-import { globalStyles } from "./styles"
+import GlobalStyles from './globalStyles'
 
 const HomeTemplate = () => {
   const data = useStaticQuery(graphql`
@@ -48,6 +46,7 @@ const HomeTemplate = () => {
       }
     }
   `)
+
   const projectsItems = data.allProjectsJson.nodes
   const { about, work, hero } = data.dataJson
   const {
@@ -57,7 +56,6 @@ const HomeTemplate = () => {
     siteLanguage,
   } = data.site.siteMetadata
 
-  // Replace depreciated Layout
   return (
     <ThemeProvider theme={theme}>
       <Helmet>
@@ -65,13 +63,13 @@ const HomeTemplate = () => {
         <title>{siteTitle}</title>
         <meta name="Description" content={siteDescription} />
       </Helmet>
-      <Global styles={globalStyles} />
+      <GlobalStyles />
       <Header logoTxt={siteLogoText} />
       <SectionWrap>
         <Hero imageAlt={hero.imageAlt} id="hero" />
         <Section backgroundColor={theme.colors.white} id="work">
-          <Styled.h2>{work.heading}</Styled.h2>
-          <Styled.p>{work.content}</Styled.p>
+          {/* <Styled.h2>{work.heading}</Styled.h2>
+          <Styled.p>{work.content}</Styled.p> */}
           {projectsItems && (
             <ProjectList>
               {projectsItems.map(({ name, link, alt, badge, image }, index) => (
