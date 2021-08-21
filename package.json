@@ -9,5 +9,8 @@
     "build": "yarn workspace gatsby-theme-scarlet-demo build",
     "serve": "yarn workspace gatsby-theme-scarlet-demo serve",
     "clean": "yarn workspace gatsby-theme-scarlet-demo clean"
+  },
+  "dependencies": {
+    "gatsby-theme-scarlet": "^1.2.0"
   }
 }
